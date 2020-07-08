@@ -1,4 +1,4 @@
-﻿// (c) Copyright 2007-10 Thomas F. Abraham.
+﻿// (c) Copyright 2007-20 Thomas F. Abraham.
 // This source is subject to the Microsoft Public License (Ms-PL).
 // See http://www.opensource.org/licenses/ms-pl.html
 // All other rights reserved.
@@ -82,18 +82,18 @@ namespace EnvironmentSettingsExporter
                             newRow["Comment"] = commentNav.Value.Replace("\n", string.Empty);
                         }
                     }
-					
-					// Check for Index attribute on Cell
-					if (cellsIterator.Current.HasAttributes)
-					{
-						XPathNavigator indexAttribute = cellsIterator.Current.SelectSingleNode("@ss:Index", nm);
+                    
+                    // Check for Index attribute on Cell
+                    if (cellsIterator.Current.HasAttributes)
+                    {
+                        XPathNavigator indexAttribute = cellsIterator.Current.SelectSingleNode("@ss:Index", nm);
 
-						if (indexAttribute != null)
-						{
-							// SpreadsheetML stores Index as 1 based, not zero based.
-							columnIndex = int.Parse(indexAttribute.Value) - 1;
-						}
-					}
+                        if (indexAttribute != null)
+                        {
+                            // SpreadsheetML stores Index as 1 based, not zero based.
+                            columnIndex = int.Parse(indexAttribute.Value) - 1;
+                        }
+                    }
 
                     // Select the data value in the cell, if present
                     XPathNavigator dataNav = cellsIterator.Current.SelectSingleNode("ss:Data", nm);

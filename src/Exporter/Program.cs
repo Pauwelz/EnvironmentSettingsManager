@@ -6,6 +6,7 @@
 using System;
 using System.Data;
 using System.IO;
+using System.Reflection;
 
 namespace EnvironmentSettingsExporter
 {
@@ -45,8 +46,8 @@ namespace EnvironmentSettingsExporter
             Console.WriteLine(
                 "Environment Settings Spreadsheet to XML Exporter "
                 + assemblyVersion.Major + "." + assemblyVersion.Minor + "." + assemblyVersion.Build);
-            Console.WriteLine("[http://EnvSettingsManager.codeplex.com]");
-            Console.WriteLine("Copyright (C) 2007-11 Thomas F. Abraham.  All Rights Reserved.");
+            Console.WriteLine("[https://github.com/tfabraham/EnvironmentSettingsManager/]");
+            Console.WriteLine("Copyright (C) 2007-20 Thomas F. Abraham.  All Rights Reserved.");
             Console.WriteLine();
             Console.ForegroundColor = defaultConsoleColor;
 

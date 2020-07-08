@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("EnvironmentSettingsExporter")]
-[assembly: AssemblyCopyright("Copyright © 2007-11 Thomas F. Abraham")]
+[assembly: AssemblyCopyright("Copyright © 2007-20 Thomas F. Abraham")]
 [assembly: AssemblyTrademark("All Rights Reserved")]
 [assembly: AssemblyCulture("")]
 
